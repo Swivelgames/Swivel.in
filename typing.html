@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Swivel</title>
+	</head>
+	<body>
+		<pre id="starter"></pre>
+		<h1 id="title"></h1>
+		<p id="type"></p>
+
+		<script src="./statics/js/jquery-2.1.4.min.js"></script>
+		<script src="./statics/js/typer.js"></script>
+		<script>
+			var focusElem = $('#title');
+
+			var AutoType = new Typer();
+
+			AutoType
+				.focus( focusElem = $('#starter') )
+				.type("Last login "+(new Date).toString(), 10, 10, false)
+				.focus( focusElem = $('<pre/>').insertAfter(focusElem) )
+				.type("Welcome back, Joseph.", 10, 10, false)
+				.focus( focusElem = $('<pre/>').insertAfter(focusElem) )
+				.type("joseph@swivel.in$", 10, 10, false)
+				.type(" ", 10, 10, true)
+				.type("jo", 1000, 100, true)
+				.type("ur", 10, 125, true)
+				.type("nal", 10, 200, true)
+				.focus( focusElem = $('<pre/>').insertAfter(focusElem) )
+				.type("\n", 300, 10, true)
+				.focus( focusElem = $('<pre/>').insertAfter(focusElem) )
+				.type("Opening journal", 300, 10, false)
+				.type("...", 200, 300, false)
+				.focus( focusElem = $('<pre/>').insertAfter(focusElem) )
+				.type("Creating new daily entry", 300, 10, false)
+				.focus( focusElem = $('#title') )
+				.type("Journal Entry: "+(new Date).toString(), 500, 20, false)
+				.focus( focusElem = $('<p/>').insertAfter(focusElem) )
+				.type("> ", 10, 10, true)
+				.type("It's funny...", 1000, 75, true)
+				.type(" When you consider it,", 500, 75, true)
+				.type(" everything just makes sense in that light.", 100, 75, true)
+				.focus( focusElem = $('<p/>').insertAfter(focusElem) )
+				.type("> ", 10, 10, true)
+				.type("It's more than designing or developing...", 500, 75, true)
+				.type(" It's about ", 300, 75, true)
+				.type("discovering what we as humans were made to do:", 300, 75, true)
+				.type(" ", 500, 75, true)
+				.type("Create", 100, 175, true)
+				.focus( focusElem = $('<p/>').insertAfter(focusElem) )
+				.type("> ", 300, 10, true)
+				.type("Following in the footsteps of our creator...", 500, 75, true)
+				.focus( focusElem = $('<p/>').insertAfter(focusElem) )
+				.type("> ", 10, 10, true)
+				.type("And ", 500, 75, true)
+				.type("not just create", 300, 75, true)
+				.type(". ", 300, 200, true)
+				.type("Create ", 10, 75, true)
+				.type("beautifully.", 300, 75, true)
+				.callback(function(){
+					//alert("done!")
+				});
+
+			AutoType.startTypingQueue();
+		</script>
+	</body>
+</html>
