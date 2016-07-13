@@ -53,7 +53,7 @@ var Typer = (function(){
 				var msgText = nextMsg.message;
 
 				var chars = msgText.split('').reverse().map(
-					(txt) => txt/*.replace(/\s+/ig,'&nbsp;')*/.replace(/\n\r?/ig,'<br>')
+					(txt) => txt.replace(/\s+/ig,'&nbsp;').replace(/\n\r?/ig,'<br>')
 				);
 
 				var thisInterval;
@@ -72,7 +72,7 @@ var Typer = (function(){
 					}
 
 					this.caret.remove();
-					$(nextMsg.container).html( $(nextMsg.container).html() + chars.pop() );
+					$(nextMsg.container).html( $(nextMsg.container).html().replace('&nbsp;',' ') + chars.pop() );
 					if(nextMsg.withCaret) $(nextMsg.container).append( this.caret );
 					else this.caret.remove();
 				}.bind(this), nextMsg.perCharWait);

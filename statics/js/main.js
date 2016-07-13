@@ -5,22 +5,22 @@
 
 	AutoType
 		.focus( focusElem = $('<p/>').appendTo(focusElem) )
-		.type("It's more than ", 1, false, true)
+		.type("It's more than ", 10, false, true)
 
 		.focus( (function(focusElem){
 			return () => $('<b/>').appendTo(focusElem)
 		})(focusElem) )
-		.type("designing", 1, false, true)
+		.type("designing", 10, false, true)
 
 		.focus( (function(focusElem){
 			return () => $('<span/>').appendTo(focusElem)
 		})(focusElem) )
-		.type(" or ", 1, false, true)
+		.type(" or ", 10, false, true)
 
 		.focus( (function(focusElem){
 			return () => $('<b/>').appendTo(focusElem)
 		})(focusElem) )
-		.type("developing", 1, 75, true)
+		.type("developing", 10, 75, true)
 
 		.focus( (function(focusElem){
 			return () => $('<span/>').appendTo(focusElem)
@@ -28,12 +28,12 @@
 		.type("...", 250, false, true)
 
 		.focus( focusElem = $('<p/>').insertAfter(focusElem) )
-		.type(" It's about ", false, false, true)
+		.type(" It's about ", 10, false, true)
 
 		.focus( (function(focusElem){
 			return () => $('<b/>').appendTo(focusElem)
 		})(focusElem) )
-		.type("discovering", 1, false, true)
+		.type("discovering", 10, false, true)
 
 		.focus( (function(focusElem){
 			return () => $('<span/>').appendTo(focusElem)
