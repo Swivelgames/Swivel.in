@@ -1,0 +1,24 @@
+{
+  "name": "swivel-in",
+  "version": "1.0.0",
+  "description": "Personal website repository",
+  "main": "server.js",
+  "dependencies": {
+    "pushstate-server": "^1.8.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Swivelgames/Swivel.in.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Swivelgames/Swivel.in/issues"
+  },
+  "homepage": "https://github.com/Swivelgames/Swivel.in#readme"
+}
