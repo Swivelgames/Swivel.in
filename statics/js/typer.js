@@ -5,11 +5,12 @@ var Typer = (function(){
 
 		var $caret = this.caret = $('<span/>').addClass('caret').css({
 			"display": "inline-block",
-			"height": "1em",
+			"height": "1.5em",// || this.determineLineHeight(),
 			"width": "0.1em",
 			"overflow": "hidden",
 			"background": "#fff",
-			"position": "absolute"
+			//"position": "absolute"
+			"vertical-align": "text-bottom"
 		});
 
 		setTimeout(function(){
@@ -34,6 +35,20 @@ var Typer = (function(){
 		typingPaused: true,
 
 		caret: null,
+
+		determineLineHeight(container) {
+			container=container||this.container;
+			var height, $tmp;
+			try {
+				$tmp = $('<ignore/>').appendTo(container);
+				height = $tmp.html('&nbsp;').outerHeight() + "px";
+				$tmp.remove();
+			} catch(e) {
+				console.warn("Error calculating line height");
+			} finally {
+				return height || "1em";
+			}
+		},
 
 		startTypingQueue() {
 			if(this.typing) return;
@@ -72,6 +87,7 @@ var Typer = (function(){
 					}
 
 					this.caret.remove();
+					this.caret.css('height', this.determineLineHeight(nextMsg.container));
 					$(nextMsg.container).html( $(nextMsg.container).html().replace('&nbsp;',' ') + chars.pop() );
 					if(nextMsg.withCaret) $(nextMsg.container).append( this.caret );
 					else this.caret.remove();

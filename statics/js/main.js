@@ -1,7 +1,7 @@
 
-	var focusElem = $('blockquote').get(0);
+	var focusElem = $('#top .container > div').get(0);
 
-	var AutoType = new Typer();
+	var AutoType = new Typer(focusElem);
 
 	AutoType
 		.focus( focusElem = $('<p/>').appendTo(focusElem) )
