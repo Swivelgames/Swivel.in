@@ -58,10 +58,10 @@ main {
 	}
 
 	main > section {
-		height: 95vh;
-		min-height: 95vh;
-		max-height: 95vh;
-		flex-basis: 95vh;
+		height: 100vh;
+		min-height: 100vh;
+		max-height: 100vh;
+		flex-basis: 100vh;
 		flex-grow: 0;
 		flex-shrink: 0;
 		display: flex;

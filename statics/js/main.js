@@ -5,59 +5,59 @@
 
 	AutoType
 		.focus( focusElem = $('<p/>').appendTo(focusElem) )
-		.type("It's more than ", 10, false, true)
+		.type("It's more than ", 10, 75, true)
 
 		.focus( (function(focusElem){
 			return () => $('<b/>').appendTo(focusElem)
 		})(focusElem) )
-		.type("designing", 10, false, true)
+		.type("designing", 10, 75, true)
 
 		.focus( (function(focusElem){
 			return () => $('<span/>').appendTo(focusElem)
 		})(focusElem) )
-		.type(" or ", 10, false, true)
+		.type(" or ", 10, 75, true)
 
 		.focus( (function(focusElem){
 			return () => $('<b/>').appendTo(focusElem)
 		})(focusElem) )
-		.type("developing", 10, 75, true)
+		.type("developing", 10, 55, true)
 
 		.focus( (function(focusElem){
 			return () => $('<span/>').appendTo(focusElem)
 		})(focusElem) )
-		.type("...", 250, false, true)
+		.type("...", 250, 75, true)
 
 		.focus( focusElem = $('<p/>').insertAfter(focusElem) )
-		.type(" It's about ", 10, false, true)
+		.type(" It's about ", 10, 75, true)
 
 		.focus( (function(focusElem){
 			return () => $('<b/>').appendTo(focusElem)
 		})(focusElem) )
-		.type("discovering", 10, false, true)
+		.type("discovering", 10, 75, true)
 
 		.focus( (function(focusElem){
 			return () => $('<span/>').appendTo(focusElem)
 		})(focusElem) )
-		.type(" what we as humans were made to do:", 300, 75, true)
-		.type(" ", 500, 75, true)
+		.type(" what we as humans were made to do:", 300, 55, true)
+		.type(" ", 500, 55, true)
 
 		.focus( (function(focusElem){
 			return () => $('<b/>').appendTo(focusElem)
 		})(focusElem) )
-		.type("create", 100, 175, true)
+		.type("create", 100, 155, true)
 
 		.focus( focusElem = $('<p/>').insertAfter(focusElem) )
-		.type("Following in the footsteps of our creator...", 500, 75, true)
+		.type("Following in the footsteps of our creator...", 500, 55, true)
 
 		.focus( focusElem = $('<p/>').insertAfter(focusElem) )
-		.type("And ", 500, 75, true)
-		.type("not just create", 300, 75, true)
+		.type("And ", 500, 55, true)
+		.type("not just create", 300, 55, true)
 		.type(". ", 300, 200, true)
 
 		.focus( (function(focusElem){
 			return () => $('<b/>').appendTo(focusElem)
 		})(focusElem) )
-		.type("Create ", 10, 75, true)
+		.type("Create ", 10, 55, true)
 
 		.focus( (function(focusElem){
 			return () => $('<b/>').appendTo($('<i>').appendTo(focusElem))
